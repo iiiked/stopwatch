@@ -58,6 +58,7 @@
                 [...stopwatch.lapList.children].forEach(i => i.classList.remove('best-lap'));
                 stopwatch.bestLap = time;
                 li.classList.add('best-lap');
+                stopwatch.laps.length === 2 && stopwatch.lapList.lastChild.classList.add('worst-lap');
             }
             if (time > stopwatch.worstLap) {
                 [...stopwatch.lapList.children].forEach(i => i.classList.remove('worst-lap'));
